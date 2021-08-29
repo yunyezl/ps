@@ -44,3 +44,14 @@ var blocks: [[Int]] = Array(repeating: Array(repeating: 0, count: width), count:
 //  [0, 0, 0, 0, 0], 
 //  [0, 0, 0, 0, 0]]
 ```
+
+
+### 3. 문자열 replace
+
+```swift
+let string = "hello"
+let a = hello.replacingOccurrences(of: "h", with: "q").replacingOccurrences(of: "e", with: "a")
+
+print(a)
+// qallo 
+```
