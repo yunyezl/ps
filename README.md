@@ -25,7 +25,7 @@ for i in stride(from: n, to: 0, by: -1) {
 // 5 4 3 2 1 0
 ```
 
-### 2. 배열 초기화
+### 2. 배열
 
 #### 1차원 배열 초기화
 
@@ -46,7 +46,9 @@ var blocks: [[Int]] = Array(repeating: Array(repeating: 0, count: width), count:
 ```
 
 
-### 3. 문자열 replace
+### 3. 문자열 
+
+#### 문자열 replaceing
 
 ```swift
 let string = "hello"
@@ -54,4 +56,20 @@ let a = hello.replacingOccurrences(of: "h", with: "q").replacingOccurrences(of: 
 
 print(a)
 // qallo 
+```
+
+### hasPrefix - 문자열이 어떤 글자로 시작하는 지 확인
+```swift
+if newId.hasPrefix(".") {
+        ...
+}
+// newId가 .으로 시작하면 true 값 반환
+```
+
+### hasPrefix - 문자열이 어떤 글자로 끝나는 지 확인
+```swift
+if newId.hasSuffix(".") {
+        ...
+}
+// newId가 .으로 끝나면 true 값 반환
 ```
