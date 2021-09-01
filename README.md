@@ -58,7 +58,7 @@ print(a)
 // qallo 
 ```
 
-### hasPrefix - 문자열이 어떤 글자로 시작하는 지 확인
+#### hasPrefix - 문자열이 어떤 글자로 시작하는 지 확인
 ```swift
 if newId.hasPrefix(".") {
         ...
@@ -66,7 +66,7 @@ if newId.hasPrefix(".") {
 // newId가 .으로 시작하면 true 값 반환
 ```
 
-### hasPrefix - 문자열이 어떤 글자로 끝나는 지 확인
+#### hasPrefix - 문자열이 어떤 글자로 끝나는 지 확인
 ```swift
 if newId.hasSuffix(".") {
         ...
