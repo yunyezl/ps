@@ -3,7 +3,10 @@
 
 ![https://user-images.githubusercontent.com/69361613/131229876-7c517506-9b3a-4f1d-a4ed-4f8047f1e2a3.JPG](https://user-images.githubusercontent.com/69361613/131229876-7c517506-9b3a-4f1d-a4ed-4f8047f1e2a3.JPG)
 
-## 자주 사용되는 것들
+## 알고리즘 정리
+[union find](https://www.notion.so/union-find-5e2876ba63a74d76b569dee5d43073bd)
+
+## 자주 사용되는 문법
 
 ### 1. for문 거꾸로 돌리기
 
@@ -73,3 +76,4 @@ if newId.hasSuffix(".") {
 }
 // newId가 .으로 끝나면 true 값 반환
 ```
+
