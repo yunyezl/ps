@@ -4,7 +4,7 @@
 ![https://user-images.githubusercontent.com/69361613/131229876-7c517506-9b3a-4f1d-a4ed-4f8047f1e2a3.JPG](https://user-images.githubusercontent.com/69361613/131229876-7c517506-9b3a-4f1d-a4ed-4f8047f1e2a3.JPG)
 
 ## 알고리즘 정리
-[union find](https://www.notion.so/union-find-5e2876ba63a74d76b569dee5d43073bd). 
+[Union Find](https://www.notion.so/union-find-5e2876ba63a74d76b569dee5d43073bd)  
 [Dynamic Programming](https://www.notion.so/Dynamic-Programming-42ea569a8a2347e2825cf5f0ea3f0f9e)
 
 ## 자주 사용되는 문법
