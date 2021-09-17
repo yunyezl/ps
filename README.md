@@ -5,7 +5,8 @@
 
 ## 알고리즘 정리
 [Union Find](https://www.notion.so/union-find-5e2876ba63a74d76b569dee5d43073bd)  
-[Dynamic Programming](https://www.notion.so/Dynamic-Programming-42ea569a8a2347e2825cf5f0ea3f0f9e)
+[Dynamic Programming](https://www.notion.so/Dynamic-Programming-42ea569a8a2347e2825cf5f0ea3f0f9e)  
+[LIS](https://www.notion.so/LIS-c6bfab941b7e434283300fc2d47ffea0)
 
 ## 자주 사용되는 문법
 
