@@ -29,7 +29,6 @@ func solution(_ orders:[String], _ course:[Int]) -> [String] {
     for i in 0..<filterCourse.count {
         for j in 0..<orders.count {
             combination(Array(orders[j]).map { String($0) }, filterCourse[i], 0, "")
-            all.sort()
             for menu in all {
                 if menuSet.keys.contains(menu) {
                     menuSet[menu]! += 1
@@ -51,14 +50,11 @@ func solution(_ orders:[String], _ course:[Int]) -> [String] {
             continue
         } else {
             let maxValue = sortedMenu.first?.value
-            answer.append(sortedMenu.first!.key)
-            for i in 1..<sortedMenu.count {
-                if sortedMenu[i].value == maxValue {
-                    answer.append(sortedMenu[i].key)
-                } else {
-                    break
-                }
-            }
+            answer.append(contentsOf: sortedMenu.filter {
+                $0.value == maxValue
+            }.map {
+                $0.key
+            })
         }
     }
     
