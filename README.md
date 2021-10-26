@@ -15,7 +15,7 @@
 #### 0...n의 반대
 
 ```swift
-for i in stride(from: n, to: 0, by: -1) {
+for i in stride(from: n, through: 0, by: -1) {
         print(i)
 }
 // 5 4 3 2 1 
