@@ -15,19 +15,19 @@
 #### 0...n의 반대
 
 ```swift
-for i in stride(from: n, through: 0, by: -1) {
+for i in stride(from: 5, through: 0, by: -1) {
         print(i)
 }
-// 5 4 3 2 1 
+// 5 4 3 2 1 0
 ```
 
 #### 0..<n의 반대
 
 ```swift
-for i in stride(from: n, to: 0, by: -1) {
+for i in stride(from: 5, to: 0, by: -1) {
         print(i)
 }
-// 5 4 3 2 1 0
+// 5 4 3 2 1 
 ```
 
 ### 2. 배열
