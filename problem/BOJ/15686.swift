@@ -32,6 +32,25 @@ for i in 0..<n {
         }
     }
 }
-var ChickenDistance = Array(repeating: Int.max, count: <#T##Int#>)
 
 combination(allChickens, m, 0, [])
+
+var allChickenDistance = Int.max
+
+for chickens in allCase {
+    var houses = Array(repeating: Int.max, count: allHouse.count)
+    for (cx, cy) in chickens {
+        for (idx, (hx, hy)) in allHouse.enumerated() {
+            let dist = distance(hx, hy, cx, cy)
+            if houses[idx] > dist {
+                houses[idx] = dist
+            }
+        }
+    }
+    let totalDist = houses.reduce(0, +)
+    if totalDist < allChickenDistance {
+        allChickenDistance = totalDist
+    }
+}
+
+print(allChickenDistance)
