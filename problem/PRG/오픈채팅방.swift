@@ -29,3 +29,42 @@ func solution(_ record:[String]) -> [String] {
     
     return answer
 }
+
+// 22.04.11 (월)
+
+import Foundation
+
+enum Action: Equatable {
+    case enter(id: String)
+    case leave(id: String)
+    
+    func toKorean() -> String {
+        switch self {
+        case .enter(let id):
+            return id + "님이 들어왔습니다."
+        case .leave(let id):
+            return id + "님이 나갔습니다."
+        }
+    }
+}
+
+func solution(_ record:[String]) -> [String] {
+    var ids: [String: String] = [:]
+    for r in record {
+        let info = r.split(separator: " ")
+        if info[0] == "Enter" || info[0] == "Change" {
+            ids[String(info[1])] = String(info[2])
+        }
+    }
+    
+    var answer: [String] = []
+    for r in record {
+        let info = r.split(separator: " ")
+        if info[0] == "Enter" {
+            answer.append(Action.enter(id: ids[String(info[1])]!).toKorean())
+        } else if info[0] == "Leave" {
+            answer.append(Action.leave(id: ids[String(info[1])]!).toKorean())
+        }
+    }
+    return answer
+}
