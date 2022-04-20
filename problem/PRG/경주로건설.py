@@ -15,7 +15,7 @@ def bfs(y, x, d, cost):
         for d in range(4):
             ny = y + dy[d]
             nx = x + dx[d]
-            if abs(d - direction) == 0 or abs(d - direction) == 0:
+            if abs(d - direction) == 0:
                 new_cost = cost + LINE_COST
             else:
                 new_cost = cost + LINE_COST + CORNER_COST
@@ -35,3 +35,5 @@ def solution(board):
     
     bfs(0, 0, 0, 0)
     bfs(0, 0, 1, 0)
+    
+    return minCost
