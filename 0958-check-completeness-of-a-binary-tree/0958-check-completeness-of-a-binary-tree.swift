@@ -38,6 +38,6 @@ class Solution {
             }
         }
         
-        return n == queue.last!.1
+        return true
     }
 }
