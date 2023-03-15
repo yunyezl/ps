@@ -18,22 +18,20 @@ class Solution {
         guard let root = root else { return true }
         
         var queue = [(root, 1)]
-        var n = 0
         var head = 0
         
         while head < queue.count {
             let (node, index) = queue[head]
             head += 1
-            n += 1
             
             if let left = node.left {
                 queue.append((left, index * 2))
-            }
+            } 
             if let right = node.right {
                 queue.append((right, index * 2 + 1))
             }
             
-            if head < queue.count && queue[head].1 != index + 1 << 1 - 1 {
+            if head < queue.count && queue[head].1 != index + 1 {
                 return false
             }
         }
