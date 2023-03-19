@@ -1,33 +1,45 @@
+import Foundation
+
 class TrieNode {
+    var isLeaf: Bool = false
     var children: [Character: TrieNode] = [:]
-    var isLeaf = false
+    
+    func findNode(_ char: Character) -> TrieNode {
+        if let child = children[char] {
+            return child
+        }
+        
+        let newNode = TrieNode()
+        children[char] = newNode
+        return newNode
+    }
 }
 
 class WordDictionary {
-    let root = TrieNode()
+    let root: TrieNode
 
-    func addWord(_ word: String) {
-        var node = root
-        for char in word {
-            if let child = node.children[char] {
-                node = child
-            } else {
-                let newChild = TrieNode()
-                node.children[char] = newChild
-                node = newChild
-            }
-        }
-        node.isLeaf = true
+    init() {
+        root = TrieNode()
     }
-
+    
+    func addWord(_ word: String) {
+        var currentNode = root
+        for char in word {
+            currentNode = currentNode.findNode(char)
+        }
+        
+        currentNode.isLeaf = true
+    }
+    
     func search(_ word: String) -> Bool {
         return searchWord(Array(word), 0, root)
     }
-
+    
     private func searchWord(_ word: [Character], _ index: Int, _ node: TrieNode) -> Bool {
         if index == word.count {
             return node.isLeaf
         }
+        
         let char = word[index]
         if char == "." {
             for child in node.children.values {
@@ -37,9 +49,11 @@ class WordDictionary {
             }
             return false
         }
+        
         guard let child = node.children[char] else {
             return false
         }
+        
         return searchWord(word, index + 1, child)
     }
 }
